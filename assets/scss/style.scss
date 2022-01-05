@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 
+#### Text
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+#### Gradient
+Background gradient:
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+### Neutral
+#### Text
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+#### Dividers
+- Light grayish blue: hsl(240, 5%, 91%)
+*/
+
+body {
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+    background: rgba(255, 255, 255, 255);
+    margin: 39.5% 6.5% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 22px;
+
+    >div {
+        background: url("../img/illustration-woman-online-mobile.svg") center/cover no-repeat;
+        width: 240px;
+        height: 181px;
+        position: absolute;
+        top: 40px;
+
+        #bgPatternMobile {
+            position: absolute;
+            top: 109px;
+        }
+    }
+
+    .faqContainer {
+        padding: 40% 0 0 0;
+
+        h1 {
+            text-align: center;
+        }
+    }
+}
+
+.accordion {
+    input {
+        display: none;
+    }
+
+    label {
+        display: block;
+        padding: 8px 22px;
+        margin: 0 0 1px 0;
+        cursor: pointer;
+        transition: ease .5s;
+    }
+
+    .content {
+        background: #E2E5F6;
+        padding: 10px 25px;
+        margin: 0 0 1px 0;
+        border-radius: 3px;
+    }
+}
+
+input+label+.content {
+    display: none;
+}
+
+input:checked+label+.content {
+    display: block;
+}

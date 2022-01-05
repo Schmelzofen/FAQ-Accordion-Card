@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -20,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -60,14 +61,86 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
+
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+/* 
+#### Text
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+#### Gradient
+Background gradient:
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+### Neutral
+#### Text
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+#### Dividers
+- Light grayish blue: hsl(240, 5%, 91%)
+*/
+body {
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+}
+
+main {
+  background: white;
+  margin: 39.5% 6.5% 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 22px;
+}
+main > div {
+  background: url("../img/illustration-woman-online-mobile.svg") center/cover no-repeat;
+  width: 240px;
+  height: 181px;
+  position: absolute;
+  top: 40px;
+}
+main > div #bgPatternMobile {
+  position: absolute;
+  top: 109px;
+}
+main .faqContainer {
+  padding: 40% 0 0 0;
+}
+main .faqContainer h1 {
+  text-align: center;
+}
+
+.accordion input {
+  display: none;
+}
+.accordion label {
+  display: block;
+  padding: 8px 22px;
+  margin: 0 0 1px 0;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.accordion .content {
+  background: #E2E5F6;
+  padding: 10px 25px;
+  margin: 0 0 1px 0;
+  border-radius: 3px;
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
