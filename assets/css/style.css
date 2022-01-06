@@ -99,6 +99,7 @@ main {
   align-items: center;
   flex-direction: column;
   border-radius: 22px;
+  font-family: Kumbh Sans;
 }
 main > div {
   background: url("../img/illustration-woman-online-mobile.svg") center/cover no-repeat;
@@ -112,27 +113,45 @@ main > div #bgPatternMobile {
   top: 109px;
 }
 main .faqContainer {
-  padding: 40% 0 0 0;
+  padding: 39% 0 0 0;
 }
 main .faqContainer h1 {
   text-align: center;
+  font-size: 4.8vh;
+  padding: 0 0 5% 0;
 }
 
+.accordion {
+  padding: 0 0 10% 0;
+}
 .accordion input {
   display: none;
 }
 .accordion label {
-  display: block;
-  padding: 8px 22px;
-  margin: 0 0 1px 0;
+  display: inline-block;
+  padding: 8px 51px 7px 24px;
+  margin: 0 0px 1px 0px;
   cursor: pointer;
   transition: ease 0.5s;
+  font-size: 2vh;
+  color: #58575f;
+  position: relative;
+  width: 340px;
+}
+.accordion label:after {
+  content: url("../img/icon-arrow-down.svg");
+  position: absolute;
+  right: 40px;
+  top: 10px;
 }
 .accordion .content {
-  background: #E2E5F6;
-  padding: 10px 25px;
-  margin: 0 0 1px 0;
-  border-radius: 3px;
+  padding: 0px 32px 0 25px;
+  margin: 0px 0 1px 0;
+  margin: 0 auto;
+}
+.accordion .content p {
+  font-size: 1.8vh;
+  color: #58575f;
 }
 
 input + label + .content {
@@ -141,6 +160,24 @@ input + label + .content {
 
 input:checked + label + .content {
   display: block;
+}
+
+input:checked + label {
+  font-weight: bolder;
+  color: #050412;
+}
+
+input:checked + label::after {
+  content: url("../img/svg.svg");
+  right: 40px;
+  top: 10px;
+}
+
+.divider {
+  width: 275px;
+  height: 8px;
+  margin: 0% auto 1.5%;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 /*# sourceMappingURL=style.css.map */
