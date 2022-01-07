@@ -182,4 +182,68 @@ input:checked + label::after {
   border-bottom: 1px solid #e8e8e8;
 }
 
+@media only screen and (min-width: 1440px) {
+  .imgContainerMobile {
+    display: none;
+  }
+
+  body {
+    min-height: auto;
+  }
+
+  main {
+    padding: 0;
+    margin: 9% 16.5% 20% 19.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    height: 510px;
+  }
+  main > div {
+    background: url("../img/illustration-woman-online-mobile.svg") center/cover no-repeat;
+    width: 420px;
+    height: 315px;
+    position: static;
+  }
+  main .faqContainer {
+    margin: 0%;
+    padding: 0% 0 0 0;
+  }
+  main .faqContainer h1 {
+    text-align: left;
+    margin: 2% 0 2% 3.5%;
+    font-size: 4vh;
+    color: #181629;
+  }
+  main .accordion label {
+    margin: 0% 3% 0 -3%;
+    padding: 0px 0 12px 30px;
+    font-size: 2vh;
+  }
+  main .accordion label:after {
+    right: -25px;
+    top: 0px;
+  }
+  main .accordion label:hover {
+    color: #e3ada7;
+  }
+  main .accordion .content p {
+    font-size: 1.8vh;
+    width: 80%;
+    margin: 1% 0 1% 0;
+  }
+
+  input:checked + label::after {
+    right: -25px;
+    top: 0px;
+  }
+
+  .divider {
+    width: 325px;
+    height: 5px;
+    margin: 0% 0 3% 8%;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
